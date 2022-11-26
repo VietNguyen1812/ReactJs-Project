@@ -1,22 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+
+  const colorList = ['red', 'green', 'blue'];
+  const student = { name: "John" };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Viet Nguyen
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> {student.name}</p>
+        <ul>
+          {colorList.map(color => (
+            <li style ={{color}}>{color}</li>
+          ))}
+        </ul>
       </header>
     </div>
   );
